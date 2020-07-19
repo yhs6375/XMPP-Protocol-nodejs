@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "node": {},
+    "node_resolve": {}
+  },
+  "ecmaVersion": "7",
+  "loadEagerly": [],
+  "dontLoad": [],
+  "libs": []
+}

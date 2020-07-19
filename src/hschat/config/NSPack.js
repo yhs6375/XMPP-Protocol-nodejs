@@ -1,0 +1,27 @@
+module.exports={
+  STREAM_OPEN:'stream',
+  STREAM_CLOSE:'</stream>',
+  REQUIRED:'rq',
+
+  FEATURES:'ft',
+  START_TLS:'st',
+  PROCEED:'pc',
+  MECHANISMS:'ms',
+  MECHANISM:'mc',
+
+  REGISTER:'rg',
+  REGISTER_SUCCESS:'rs',
+  REGISTER_FAILURE:'rf',
+
+  AUTH:'au',
+  AUTH_CHALLENGE:'cg',
+  CHALLENGE_RESPONSE:'rp',
+  AUTH_SUCCESS:'as',
+  AUTH_FAILURE:'af',
+
+  IDENTITY_REGISTER:'ir',
+  PREKEY_REGISTER:'pr',
+  SIGNED_PREKEY_REGISTER:'sr',
+  CHAT_KEY_REGISTER_SUCCESS:'cs',
+  CHAT_KEY_REGISTER_FAILURE:'cf'
+}
