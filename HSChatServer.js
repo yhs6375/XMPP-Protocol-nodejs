@@ -1,4 +1,4 @@
-const HSChat = require("./hosung_module/hschat");
+const HSChat = require("./src/hschat");
 
 let HSChatServer = new HSChat({
     port: 5222,
@@ -13,8 +13,8 @@ HSChatServer.on("connect", function (client) {
     });
     client.on("online", function () {
         console.log("ONLINE");
-        console.log(xmpp.Message);
-        client.send(new xmpp.Message({ type: "chat" }).c("body").t("Hello there, little client."));
+        console.log(HSChat.Message);
+        client.send(new HSChat.Message({ type: "chat" }).c("body").t("Hello client."));
         console.log("ONLINE END");
     });
 
