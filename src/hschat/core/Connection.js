@@ -107,13 +107,12 @@ class Connection extends EventEmitter {
         );
         cleartext.on("clientError", this.emit.bind(this, "error"));
         if (!this.reconnect) {
-            this.reconnect = true; // need this so stopParser works properly
+            this.reconnect = true;
             this.once("reconnect", function () {
                 this.reconnect = false;
             });
         }
         this.stopParser();
-        // if we reconnect we need to get back to the previous socket creation
         this.listen({ socket: cleartext, preserve: "on" });
     }
     onStanza(stanza) {
