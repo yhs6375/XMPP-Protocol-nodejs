@@ -58,14 +58,12 @@ class Connection extends EventEmitter {
         }
 
         if (this.streamTo) {
-            // in case of a component connecting
             attrs.to = this.streamTo;
         }
 
         var el = new Element(NS.STREAM_OPEN, attrs);
         var streamOpen;
         if (el.name === "stream:stream") {
-            // make it non-empty to cut the closing tag
             el.t(" ");
             var s = el.toString();
             streamOpen = s.substr(0, s.indexOf(" </stream:stream>"));
@@ -185,10 +183,8 @@ Connection.prototype.NS_XMPP_TLS = NS_XMPP_TLS;
 Connection.prototype.NS_STREAM = NS_STREAM;
 Connection.prototype.NS_XMPP_STREAMS = NS_XMPP_STREAMS;
 Connection.prototype.allowTLS = true;
-// FIXME deprecate
 Connection.prototype.startStream = Connection.prototype.openStream;
 
-// FIXME deprecate
 Connection.prototype.endStream = Connection.prototype.closeStream;
 
 module.exports = Connection;
